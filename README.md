@@ -32,6 +32,7 @@ details page.
  ## Launch
  To run this project, just clone this repo onto your local computer using `npm clone`
  And then run `npm start`.
+ Optionally, you can view the live demo here: [https://crypto-fanatii-app.herokuapp.com/](Live Demo)
  
 
  
