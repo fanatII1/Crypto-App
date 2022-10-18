@@ -1,0 +1,253 @@
+#main-container{
+    height: 100%;
+}
+
+
+/*Styles on main-crypto-contents and contents*/
+#main-crypto-content{
+    background: #06071b;
+    height: 100%;
+}
+
+#welcoming-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+}
+
+.welcome-heading{
+    color: #fff;
+    animation: slideHeading .5s;
+}
+
+@keyframes slideHeading {
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+
+
+#crypto-connect{
+    display: flex;
+    align-items: center;
+    column-gap: 2%;
+    width: 20%;
+}
+
+.coin-select{
+    outline: none;
+}
+
+.coin-select, .connect-wallet{
+    background: #00e178;
+    background: -webkit-linear-gradient(90deg, #00e178 0%, #000062 100%);
+    background: linear-gradient(90deg, #00e178 0%, #000062 100%);
+    color: #fff;
+    border-radius: 10px;
+    padding: 1%;
+    width: 50%;
+    min-height: 30px;
+    max-height: 45px;
+    font-size: 1.03rem;
+    cursor: pointer;
+}
+
+.coin{
+    background: #fff;
+    color: #000;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+
+/*Styles on crypto-article and contents*/
+#latest-crypto-news{
+    height: 100%;
+}
+
+.article{
+    height: 33.33%;
+    padding: 2%;
+    border-radius: 10px;
+    transition: .4s;
+}
+
+.article-image-container{
+    height: 100%;
+    position: relative;
+}
+
+.article-image{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    animation: opacityIn .4s;
+}
+
+.article-image-overlay{
+    background: #00000059;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    animation: opacityIn .4s;
+}
+
+@keyframes opacityIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
+.article-link, .article-link:visited{
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+#crypto-article{
+    display: flex;
+    height: 90%;
+}
+
+#latest-crypto-news{
+    width: 25%;
+}
+
+#coins-information{
+    width: 75%;
+    height: 100%;
+    padding: 0 2%;
+    overflow-y: scroll;
+}
+
+.Latest-heading{
+    color: #fff;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1%;
+}
+
+#coins-information::-webkit-scrollbar-thumb{
+    background-color: rgb(75, 75, 75);
+    border-radius: 20px;
+}
+
+#coins-information::-webkit-scrollbar{ 
+    width: 12px;
+    border-radius: 20px;
+}
+
+.coin-chart{
+    background: #2b2f77;
+    background: -webkit-linear-gradient(270deg, #2b2f77 0%, #141852 50%, #070b34 100%);
+    background: linear-gradient(270deg, #2b2f77 0%, #141852 50%, #070b34 100%);
+    border-radius: 20px;
+    cursor: pointer;
+    height: 80%;
+}
+
+/*Canvas styling application as the chartjs library creates a canvas elemnent when creating a chart*/
+canvas{
+    height: 100% !important;
+}
+
+#top-ten-coinsList{
+    list-style-type: none;
+}
+
+.top-ten-coin-list-item{
+    max-height: 40px;
+    margin: 2% 0;
+    padding: 0.7%;
+    display: grid;
+    grid-template-columns: 10% 30% 20% 20% 20%;
+    grid-template-rows: 100%;
+    background: #00e178;
+    background: -webkit-linear-gradient(90deg, #00e178 0%, #000062 100%);
+    background: linear-gradient(90deg, #00e178 0%, #000062 100%);
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.top-ten-coin-list-item:hover{
+    background-color: rgb(236, 236, 236);
+}
+
+.coin-image-container{
+    height: 100%;
+}
+
+.coin-image{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.coin-image-container, .coin-name, .coin-price, .coin-marketCap, .coin-info{
+    display: flex;
+    align-items: center;
+}
+
+.coin-info{
+    justify-content: flex-end;
+}
+
+
+
+/*Responsive Activity*/
+/*sizing content from tablets downwards*/
+@media screen and (max-width: 821px) {
+    #crypto-connect{
+        width: 50%;
+    }
+
+    #main-crypto-content{
+      font-size: 0.7rem;
+    }
+
+    #crypto-article{
+        display: block;
+    }
+
+    #latest-crypto-news{
+        width: 100%;
+        background: #06071b;
+    }
+
+    #coins-information{
+        width: 100%;
+    }
+
+    .coin-chart{
+        height: 60%;
+    }
+}
+
+/*sizing coin-chart on mobile*/
+@media screen and (max-width: 425px) {
+    .coin-chart{
+        height: 30%;
+    }
+}
